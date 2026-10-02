@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: market-hunter-v2
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python market_hunter.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12"
